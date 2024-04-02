@@ -1,0 +1,62 @@
+<!--In this project we are using this library to add material icons:
+https://cdnjs.com/libraries/qrcodejs-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <section>
+        <!--First Row-->
+        <div class="row">
+<!--input 1-->    <input type="color" class="light" value="#ffffff"><!--type="color" provide a user interface element that lets a user specify a color, either by using a visual color picker interface or by entering the color into a text field-->
+<!--input 2-->    <input type="color" class="dark">
+
+            <select class="sizes"><!--The <select> element is used to create a drop-down list.-->
+
+                <option value="100">100x100</option>
+                <option value="200">200x200</option>
+                <option value="300">300x300</option>
+                <option selected value="400">400x400</option><!--Selected alue is the default value which appears automatically.-->
+                <option value="500">500x500</option>
+                <option value="600">600x600</option>
+                <option value="700">700x700</option>
+                <option value="800">800x800</option>
+                <option value="900">900x900</option>
+                <option value="1000">1000x1000</option>
+
+            </select>
+        </div>
+
+        <!--Taking the input text from the user.-->
+        <input type="text" class="qr-text" placeholder="Enter QR Text">
+
+        <!--Displaying the QR Code-->
+        <div id="qr-code"></div>
+
+        <!--Various Action Buttons-->
+        <div class="action-container">
+            <a href="#" class="download btn" download="QRCode"><!--download attribute instructs browsers to download a URL instead of navigating to it-->
+                <span>Download</span>
+                <img src="images/download.svg" alt="">
+            </a>
+
+            <button class="btn share-btn">
+                <span>Share</span>
+                <img src="images/share.svg" alt="">
+            </button>
+        </div>
+
+    </section>
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
